@@ -13,15 +13,19 @@ See sources.
 Installation
 -------
 Yes, no diff files. You just have to:
+
 * copy the linux directory in your linux source tree
 * edit arch/x86/kernel/Makefile to add dynamic_sys to the list of objects
+
 ```
 obj-y += dynamic_sys.o
 ```
+
 * locate syscall table (position may change between different kernel versions)
   and add dynamic_sys entries. 
   For the lastest version (3.3 at the moment) you need to edit
 	arch/x86/syscalls/syscall_32.tbl and add
+
 ```
 349 i386  dynamic_sys0 sys_dynamic_sys0
 350 i386  dynamic_sys1 sys_dynamic_sys1
