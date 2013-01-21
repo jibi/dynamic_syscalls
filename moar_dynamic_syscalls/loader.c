@@ -17,7 +17,7 @@
 
 asmlinkage long
 my_syscall(int val) {
-	printk(KERN_INFO "LOLOL: %d", val);
+	printk(KERN_INFO "LOLOL: %d\n", val);
 
 	return 0;
 }
